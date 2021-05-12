@@ -1,12 +1,10 @@
 let hasBullet = false;
 
 const bullet = function() {
-    console.log('bullet classed');
     window.setTimeout(provideBullet, 5000);
 
     function provideBullet() {
         bulletDiv.style.display = 'block';
-        console.log('bullet is there');
         hasBullet = true;
         window.addEventListener('keypress', bulletShotEvent);
     }
@@ -25,8 +23,7 @@ const bullet = function() {
     function bulletCollision(y, index) {
         for (let enemy of enemies) {
             if (enemy.y <= y && index === enemy.lane && y - enemy.y <= carHeight) {
-                enemy.y -= 1100;
-                console.log('collision');
+                enemy.y -= 900;
                 return true;
             }
         }
@@ -49,6 +46,5 @@ const bullet = function() {
             }
             fire();
         }
-
     }
 }

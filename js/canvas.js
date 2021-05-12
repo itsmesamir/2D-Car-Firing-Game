@@ -162,6 +162,7 @@ const startGame = function() {
     gameOver = false;
     laneSpeed = 2.2;
     lanePosition = 1;
+    hasBullet = false;
     setMoveEvents();
     increaseSpeed();
     bullet();
